@@ -12,9 +12,17 @@
 				</nav>
 			</div>
 			<table class="table-bordered">
-				<tr ng-repeat="">
-					<td> Test </td>
-					<td> Test </td>
+				<tr ng-repeat="item in items">
+					<td> <img ng-src="{{item.imageUrl}}"></td>
+					<td> 
+						<h1>{{item.name}}</h1>
+						<p><b>Price: </b>{{item.price}}</p>
+						<p><b>Caffine Scale: </b>{{item.caffineScale}}</p>
+						<p><b>Ingredients: </b> {{item.ingredients}}</p>
+						<p><b>Rating: </b> {{item.rating}}</p>
+						<p><b>In Stock?: </b> {{item.inStock}}</p>
+						<p><b>Categories: </b> {{item.categories}}</p>
+					</td>
 				</tr>
 			</table>
 		</div>
