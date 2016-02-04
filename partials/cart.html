@@ -1,0 +1,31 @@
+<div>
+	
+</div>
+<div>
+	<table>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr ng-repeat="item in x">
+			<td>
+				<h1>{{item.name}}</h1>
+				<img ng-src="{{item.imageUrl">
+				<p><b>Caffeine Scale: </b> {{item.caffeineScale}} </p>
+				<p><b>Ingredients: </b> {{item.ingredients}} </p>
+				<p><b>Rating: </b> {{item.rating}}</p>
+			</td>
+			<td>
+				<!-- {{item.idk}} -->
+			</td>
+			<td>
+				{{item.price*item.quantity}}
+			</td>
+			<td>
+				<button>Edit</button>
+				<button>Remove</button>
+			</td>
+		</tr>
+	</table>
+</div>
