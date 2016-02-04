@@ -7,21 +7,24 @@
 						<li>Search by Type</li>
 						<select></select>
 						<li>Search by Name</li>
-						<input type="text">
+						<input type="text" name="query" ng-model="query">
 					</ul>
 				</nav>
 			</div>
 			<table class="table-bordered">
-				<tr ng-repeat="item in items">
+				<tr ng-repeat="item in items | orderBy: name">
 					<td> <img ng-src="{{item.imageUrl}}"></td>
 					<td> 
 						<h1>{{item.name}}</h1>
-						<p><b>Price: </b>{{item.price}}</p>
+						<p><b>Price: </b>{{item.price | cents | currency}}</p>
 						<p><b>Caffine Scale: </b>{{item.caffineScale}}</p>
 						<p><b>Ingredients: </b> {{item.ingredients}}</p>
 						<p><b>Rating: </b> {{item.rating}}</p>
 						<p><b>In Stock?: </b> {{item.inStock}}</p>
-						<p><b>Categories: </b> {{item.categories}}</p>
+						<p><b>Categories: </b> </p>
+							<ul>
+								<li ng-repeat="category in item.categories">{{category}}</li>
+							</ul>
 					</td>
 				</tr>
 			</table>

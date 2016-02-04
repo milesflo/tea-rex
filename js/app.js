@@ -1,5 +1,11 @@
 var app = angular.module("meanTea", ["ngRoute"]);
 
+app.filter('cents', function($filter) {
+	return function (input) {
+		return (input/100);
+	}
+})
+
 app.config(function($routeProvider, $locationProvider) {
 	$routeProvider
 	.when('/', {
