@@ -12,3 +12,7 @@ app.controller("Catalogue", function($scope, $rootScope, $routeParams, $http, $l
 		}
 	})
 })
+
+app.controller("Cart", function() {
+	
+})
