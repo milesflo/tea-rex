@@ -12,12 +12,26 @@
 				</nav>
 			</div>
 			<table class="table-bordered">
+				<thead>
+					<tr>
+						<td>Tea</td>
+						<td>
+							<span class="left">Information:</span>
+							<span class="right">View by Price: 
+								<select>
+									<option> Least to Greatest </option>
+									<option> Greatest to Least </option>
+								</select>
+							</span>
+						</td>
+					</tr>
+				</thead>
 				<tr ng-repeat="item in items | orderBy: name">
 					<td> <img ng-src="{{item.imageUrl}}"></td>
 					<td> 
 						<h1>{{item.name}}</h1>
 						<p><b>Price: </b>{{item.price | cents | currency}}</p>
-						<p><b>Caffine Scale: </b>{{item.caffeineScale}}</p>
+						<p><b>Caffeine Scale: </b>{{item.caffeineScale}}</p>
 						<p><b>Ingredients: </b> {{item.ingredients}}</p>
 						<p><b>Rating: </b> {{item.rating}}</p>
 						<p><b>In Stock?: </b> {{item.inStock}}</p>
