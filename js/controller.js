@@ -1,8 +1,7 @@
-app.controller("Catalogue", function($scope, $rootScope, $routeParams, $http, $location) {
+app.controller("Catalogue", function($scope, $rootScope, $routeParams, $http, $location, noiceCart) {
 	window.scope = $scope;
-
-	$scope.message = "Hello!";
 	$scope.teaCategories =[""];
+	$scope.noice = noiceCart;
 
 	$http.get("./../teas.json").then(function(response) {
 		console.log(response);
@@ -33,6 +32,9 @@ app.controller("Catalogue", function($scope, $rootScope, $routeParams, $http, $l
 	})
 })
 
-app.controller("Cart", function() {
+app.controller("Cart", function($scope, $rootScope, $routeParams, $http, $location, noiceCart) {
+	window.scope = $scope;
 
+	$scope.noice = noiceCart;
+	console.log($scope.noice);
 })
