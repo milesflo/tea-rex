@@ -1,3 +1,8 @@
+$(document).ready(function() {
+    $('select').material_select();
+});
+
+
 var app = angular.module("meanTea", ["ngRoute"]);
 
 app.filter('cents', function($filter) {
