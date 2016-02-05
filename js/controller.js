@@ -1,6 +1,7 @@
-app.controller("Catalogue", function($scope, $rootScope, $routeParams, $http, $location) {
-	$scope.message = "Hello!";
-	$scope.categories =[];
+app.controller("Catalogue", function($scope, $rootScope, $routeParams, $http, $location, noiceCart) {
+	window.scope = $scope;
+	$scope.teaCategories =[""];
+	$scope.noice = noiceCart;
 
 	$http.get("./../teas.json").then(function(response) {
 		console.log(response);
@@ -10,9 +11,9 @@ app.controller("Catalogue", function($scope, $rootScope, $routeParams, $http, $l
 		function categories(arr) {
 		    for (var n = 0; n < arr.length; n++) {
 		    	var current = arr[n];
-		    	var index = $scope.categories.indexOf(current);
+		    	var index = $scope.teaCategories.indexOf(current);
 		    	if (index === -1) {
-		    		$scope.categories.push(arr[n]);
+		    		$scope.teaCategories.push(arr[n]);
 		    		}
 		    	}
 		};
@@ -31,6 +32,9 @@ app.controller("Catalogue", function($scope, $rootScope, $routeParams, $http, $l
 	})
 })
 
-app.controller("Cart", function() {
+app.controller("Cart", function($scope, $rootScope, $routeParams, $http, $location, noiceCart) {
+	window.scope = $scope;
 
+	$scope.noice = noiceCart;
+	console.log($scope.noice);
 })
