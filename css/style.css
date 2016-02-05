@@ -1,0 +1,11 @@
+.left {
+	display: block;
+	float: left;
+}
+
+.right {
+	display: block;
+	float: right;
+}
+
+

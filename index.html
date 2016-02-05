@@ -1,6 +1,118 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="meanTea">
 <head>
+<style type="text/css">
+	$baseFontSize: 16;
+$green: #1abc9c;
+$yellow: #f1c40f;
+$red: #c0392b;
+$blue: #3498db;
+$grey: #f2f2f2;
+
+@function rem($val) {
+  @return #{$val / $baseFontSize}rem;
+}
+
+.body {
+  font-size: #{$baseFontSize};
+}
+
+.content {
+  display: flex;
+}
+
+// Gauge
+.mask {
+  position: relative;
+  overflow: hidden;
+
+  display: block;
+  width: rem(200);
+  height: rem(100);
+  margin: rem(20);
+}
+.semi-circle {
+  position: relative;
+
+  display: block;
+  width: rem(200);
+  height: rem(100);
+
+  background: linear-gradient(to right, $red 0%, $yellow 50%, $green 100%);
+
+  border-radius: 50% 50% 50% 50% / 100% 100% 0% 0% ;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 2;
+
+    display: block;
+    width: rem(140);
+    height: rem(70);
+    margin-left: rem(-70);
+
+    background: #fff;
+
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0% ;
+  }      
+}
+
+.semi-circle--mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: rem(200);
+  height: rem(200);
+
+  background: transparent;
+
+  transform: rotate(120deg) translate3d(0,0,0);
+  transform-origin: center center;
+  backface-visibility: hidden;
+  transition: all .3s ease-in-out;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0%;
+    z-index: 2;
+
+    display: block;
+    width: rem(202);
+    height: rem(102);
+    margin: -1px 0 0 -1px;
+
+    background: #f2f2f2;
+
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0% ;
+  }      
+}
+
+
+
+.gauge--4 {
+  .semi-circle {
+    background: $green;
+  }
+  
+  .semi-circle--mask {
+    transform: rotate(162deg) translate3d(0,0,0);
+  }
+}
+
+	
+</style>
+
+
+
+
 	<meta charset="UTF-8">
 	<title>Document</title>
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
@@ -19,10 +131,11 @@
 	<div class="view" ng-view>
 	​	
 	</div>
-
-
+​
+​
 	<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js'></script>
 	<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js'></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.js"></script>
 	<script src="js/app.js"></script>
@@ -30,6 +143,6 @@
 	<script src="js/directives.js"></script>
 	<script src="js/filters.js"></script>
 	<script src="js/services.js"></script>
-
+​
 </body>
 </html>
