@@ -6,7 +6,7 @@ app.factory('noiceCart', function() {
 
 	noice.addCart = function(obj, quant) {
 		quantity = parseInt(quant) || 1;
-		for (i= 0; i < noice.cart.length; i++) {
+		for (var i = 0; i < noice.cart.length; i++) {
 			if (noice.cart[i].name == obj.name) {
 				noice.cart[i].quantity += quantity;
 				return;
@@ -19,9 +19,14 @@ app.factory('noiceCart', function() {
 
 
 	noice.deleteItem = function(obj) {
-		var index = $scope.cart.indexOf(obj);
-		$scope.cart.splice(index, 1);
+		for (var i = 0; i < noice.cart.length; i++) {
+			if (noice.cart[i].name == obj.name) {
+				noice.cart.splice(i, 1);
+			}
+		}
 		console.log(noice.cart);
 	};
+
+
 	return noice;
 });
