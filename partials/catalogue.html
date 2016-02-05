@@ -5,7 +5,9 @@
 				<nav class="row">
 					<ul>
 						<li>Search by Type</li>
-						<select></select>
+						<select>
+							<option ng-repeat="category in categories">{{category}}</option>
+						</select>
 						<li>Search by Name</li>
 						<input type="text" name="query" ng-model="query">
 					</ul>
