@@ -10,7 +10,7 @@
 				<td>Sub-Total</td>
 			</tr>
 		</thead>
-		<tr ng-repeat="item in x">
+		<tr ng-repeat="item in noice.cart">
 			<td>
 				<h1>{{item.name}}</h1>
 				<img ng-src="{{item.imageUrl}}">
@@ -19,14 +19,14 @@
 				<p><b>Rating: </b> {{item.rating}}</p>
 			</td>
 			<td>
-				<!-- {{item.idk}} -->
+				{{item.quantity}}
 			</td>
 			<td>
 				{{item.price*item.quantity}}
 			</td>
 			<td>
-				<button>Edit</button>
-				<button>Remove</button>
+				<button ng-click="">Edit</button>
+				<button ng-click="noice.deleteItem(item)">Remove</button>
 			</td>
 		</tr>
 	</table>
