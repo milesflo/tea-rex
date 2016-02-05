@@ -1,4 +1,4 @@
-app.controller("Catalogue", function($scope, $rootScope, $routeParams, $http, $location) {
+app.controller("Catalogue", function($scope, $rootScope, $routeParams, $http, $location, noiceCart) {
 	$scope.message = "Hello!";
 	$scope.categories =[];
 
@@ -31,6 +31,6 @@ app.controller("Catalogue", function($scope, $rootScope, $routeParams, $http, $l
 	})
 })
 
-app.controller("Cart", function() {
+app.controller("Cart", function(noiceCart) {
 
 })
