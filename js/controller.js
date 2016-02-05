@@ -1,6 +1,8 @@
 app.controller("Catalogue", function($scope, $rootScope, $routeParams, $http, $location) {
+	window.scope = $scope;
+
 	$scope.message = "Hello!";
-	$scope.categories =[];
+	$scope.teaCategories =[""];
 
 	$http.get("./../teas.json").then(function(response) {
 		console.log(response);
@@ -10,9 +12,9 @@ app.controller("Catalogue", function($scope, $rootScope, $routeParams, $http, $l
 		function categories(arr) {
 		    for (var n = 0; n < arr.length; n++) {
 		    	var current = arr[n];
-		    	var index = $scope.categories.indexOf(current);
+		    	var index = $scope.teaCategories.indexOf(current);
 		    	if (index === -1) {
-		    		$scope.categories.push(arr[n]);
+		    		$scope.teaCategories.push(arr[n]);
 		    		}
 		    	}
 		};
