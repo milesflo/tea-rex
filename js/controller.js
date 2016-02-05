@@ -1,6 +1,5 @@
 app.controller("Catalogue", function($scope, $rootScope, $routeParams, $http, $location) {
 	window.scope = $scope;
-
 	$scope.message = "Hello!";
 	$scope.teaCategories =[""];
 
@@ -33,6 +32,6 @@ app.controller("Catalogue", function($scope, $rootScope, $routeParams, $http, $l
 	})
 })
 
-app.controller("Cart", function() {
+app.controller("Cart", function(noiceCart) {
 
 })
