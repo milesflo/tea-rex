@@ -5,7 +5,7 @@ app.factory('noiceCart', function() {
 	noice.cart = [];
 
 	noice.addCart = function(obj, quant) {
-		quantity = parseInt(quant) || 1;
+		quantity = parseFloat(quant) || 1;
 		for (var i = 0; i < noice.cart.length; i++) {
 			if (noice.cart[i].name == obj.name) {
 				noice.cart[i].quantity += quantity;

@@ -1,8 +1,9 @@
+<div class="row">
+​					<div class="col s10 offset-s1">
+			      <div class="card white">
+			        <div class="card-content black-text">
 <div>
-	
-</div>
-<div>
-	<table>
+	<table class="">
 		<thead>
 			<tr>
 				<td>Product</td>
@@ -22,12 +23,20 @@
 				{{item.quantity}}
 			</td>
 			<td>
-				{{item.price*item.quantity}}
+				{{item.price * item.quantity | cents | currency:"USD$ "}}
 			</td>
 			<td>
-				<button ng-click="">Edit</button>
-				<button ng-click="noice.deleteItem(item)">Remove</button>
+				<button class="red darken-3 btn waves-effect waves-light right" ng-click="">Edit</button>
+
+				<br><br>
+				
+				<button class="red darken-3 btn waves-effect waves-light right" ng-click="noice.deleteItem(item)">Remove</button>
 			</td>
 		</tr>
 	</table>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
