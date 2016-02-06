@@ -27,6 +27,14 @@ app.factory('noiceCart', function() {
 		console.log(noice.cart);
 	};
 
+	noice.total = function() {
+		var output = 0;
+		for (var i = 0; i < noice.cart.length; i++) {
+			output += (noice.cart[i].price * noice.cart[i].quantity);
+		}
+		return output;
+	}
+
 
 	return noice;
 });

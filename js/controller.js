@@ -34,7 +34,9 @@ app.controller("Catalogue", function($scope, $rootScope, $routeParams, $http, $l
 
 app.controller("Cart", function($scope, $rootScope, $routeParams, $http, $location, noiceCart) {
 	window.scope = $scope;
-
 	$scope.noice = noiceCart;
-	console.log($scope.noice);
+	
+	$scope.total = $scope.noice.total();
+
+	$scope.curretSum = 0;
 })

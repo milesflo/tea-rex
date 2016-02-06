@@ -24,6 +24,10 @@
 		<div class="col s10 offset-s1">
       <div class="card white">
       	<div class="card-content black-text">
+      	<select class="left" ng-model="priceOrder" ng-init="price">
+      		<option value="price">Low to High</option>
+      		<option value="-price">High to Low</option>
+      	</select>
       	<a ng-href="/#/cart"><button class="red darken-3 btn waves-effect waves-light right" ng-click="toCartView()"> View Cart | {{noice.cart.length}}</button></a>
 				<table class="bordered">
 					<thead>
@@ -39,7 +43,7 @@
 							</td>
 						</tr>
 					</thead>
-					<tr ng-repeat="item in items | orderBy: name | filter : catFilter | filter: searchQuery">
+					<tr ng-repeat="item in items | orderBy: priceOrder | filter : catFilter | filter: searchQuery">
 						<td> <img ng-src="{{item.imageUrl}}"></td>
 						<td> 
 							<h3>{{item.name}}</h3>

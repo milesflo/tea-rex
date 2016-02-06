@@ -10,6 +10,7 @@
 				<td>Product</td>
 				<td>Quantity</td>
 				<td>Sub-Total</td>
+				<td> TOTAL: {{total | cents | currency:"USD$ "}}</td>
 			</tr>
 		</thead>
 		<tr ng-repeat="item in noice.cart">
