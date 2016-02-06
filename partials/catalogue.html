@@ -24,21 +24,16 @@
 		<div class="col s10 offset-s1">
       <div class="card white">
       	<div class="card-content black-text">
-      	<select class="left" ng-model="priceOrder" ng-init="price">
-      		<option value="price">Low to High</option>
-      		<option value="-price">High to Low</option>
-      	</select>
       	<a ng-href="/#/cart"><button class="red darken-3 btn waves-effect waves-light right" ng-click="toCartView()"> View Cart | {{noice.cart.length}}</button></a>
 				<table class="bordered">
 					<thead>
 						<tr>
 							<td>Tea</td>
 							<td>
-								<span class="right">View by Price: 
-									<select>
-										<option> Least to Greatest </option>
-										<option> Greatest to Least </option>
-									</select>
+								<span class="right">View by Price: <select class="left" ng-model="priceOrder" ng-init="price">
+							      		<option value="price">Low to High</option>
+							      		<option value="-price">High to Low</option>
+							      	</select>
 								</span>
 							</td>
 						</tr>
