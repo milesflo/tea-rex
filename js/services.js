@@ -14,7 +14,6 @@ app.factory('noiceCart', function() {
 		}
 		obj.quantity = quantity;
 		noice.cart.push(obj);
-		console.log(noice.cart);
 	};
 
 
@@ -24,7 +23,6 @@ app.factory('noiceCart', function() {
 				noice.cart.splice(i, 1);
 			}
 		}
-		console.log(noice.cart);
 	};
 
 	noice.total = function() {
@@ -34,7 +32,6 @@ app.factory('noiceCart', function() {
 		}
 		return output;
 	}
-	console.log(noice);
 
 	return noice;
 });
