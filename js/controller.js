@@ -4,7 +4,6 @@ app.controller("Catalogue", function($scope, $rootScope, $routeParams, $http, $l
 	$scope.noice = noiceCart;
 
 	$http.get("./../teas.json").then(function(response) {
-		console.log(response);
 		$scope.items = response.data;
 		// $scope.orderBy = "price";
 

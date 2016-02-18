@@ -34,7 +34,7 @@ app.factory('noiceCart', function() {
 		}
 		return output;
 	}
-
+	console.log(noice);
 
 	return noice;
 });
