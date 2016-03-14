@@ -1,6 +1,6 @@
 app.controller("Catalogue", function($scope, $rootScope, $routeParams, $http, $location, noiceCart) {
 	window.scope = $scope;
-	$scope.teaCategories =[""];
+	$scope.teaCategories =[];
 	$scope.noice = noiceCart;
 
 	$http.get("./../teas.json").then(function(response) {
@@ -28,8 +28,8 @@ app.controller("Catalogue", function($scope, $rootScope, $routeParams, $http, $l
 			}
 
 		}
-	})
-})
+	});
+});
 
 app.controller("Cart", function($scope, $rootScope, $routeParams, $http, $location, noiceCart) {
 	window.scope = $scope;
@@ -38,4 +38,4 @@ app.controller("Cart", function($scope, $rootScope, $routeParams, $http, $locati
 	$scope.total = $scope.noice.total();
 
 	$scope.curretSum = 0;
-})
+});

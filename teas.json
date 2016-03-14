@@ -9,7 +9,7 @@
         "rating": 1,
         "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/32664_d?$cimg$",
         "__v": 0,
-        "categories": [ "dark", "cold"]
+        "categories": [ "Dark", "Cold"]
     },
 
     {
@@ -22,7 +22,7 @@
         "rating": 2,
         "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/32303_d?$cimg$",
         "__v": 0,
-        "categories": ["awesome"]
+        "categories": ["Awesome"]
     },
     {
         "_id": "55c8ee82152165d244b98302",
@@ -34,7 +34,7 @@
         "rating": 4,
         "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/31358_d?$cimg$",
         "__v": 0,
-        "categories": ["cold"]
+        "categories": ["Cold"]
     },
     {
         "_id": "55c8ee82152165d244b98303",
@@ -46,7 +46,7 @@
         "rating": 1,
         "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/31358_d?$cimg$",
         "__v": 0,
-        "categories": ["dry", "hot", "awesome"]
+        "categories": ["Dry", "Hot", "Awesome"]
     },
     {
         "_id": "55c8ee82152165d244b98304",
@@ -58,7 +58,7 @@
         "rating": 1,
         "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/32621_d?$cimg$",
         "__v": 0,
-        "categories": ["summer"]
+        "categories": ["Summer"]
     },
     {
         "_id": "55c8ee82152165d244b98305",
@@ -70,7 +70,7 @@
         "rating": 3,
         "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/31359_d?$cimg$",
         "__v": 0,
-        "categories": ["dry","lucid","warm"]
+        "categories": ["Dry","Lucid","Warm"]
     },
     {
         "_id": "55c8ee82152165d244b98306",
@@ -82,7 +82,7 @@
         "rating": 3,
         "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/32303_d?$cimg$",
         "__v": 0,
-        "categories": ["summer"]
+        "categories": ["Summer"]
     },
     {
         "_id": "55c8ee82152165d244b98307",
@@ -94,7 +94,7 @@
         "rating": 2,
         "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/31358_d?$cimg$",
         "__v": 0,
-        "categories": ["dry","winter","lucid"]
+        "categories": ["Dry","Winter","Lucid"]
     },
     {
         "_id": "55c8ee82152165d244b98308",
@@ -106,7 +106,7 @@
         "rating": 3,
         "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/32174_d?$cimg$",
         "__v": 0,
-        "categories": ["lucid","hot"]
+        "categories": ["Lucid","Hot"]
     },
     {
         "_id": "55c8ee82152165d244b98309",
@@ -118,6 +118,6 @@
         "rating": 2,
         "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/32621_d?$cimg$",
         "__v": 0,
-        "categories": ["spring", "warm","winter"]
+        "categories": ["Spring", "Warm","Winter"]
     }
 ]

@@ -2,64 +2,69 @@
 <div class="container">
 	<div class="row">
 		<div class="col-xs-10 col-xs-offset-1">
-			<div>
-				<div class="row">
-​					<div class="col s10 offset-s1">
-			      <div class="card white">
-			        <div class="card-content black-text">
-								<ul>
-									<li>Search by Type</li>
-									<select material-select watch style="display:block" ng-model="catFilter">
-										<option ng-repeat="category in teaCategories" ng-value="{{category}}">{{category}}</option>
-									</select>
-									<li>Search by Name</li>
-									<input type="text" name="query" ng-model="searchQuery">
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+
+
 		<div class="row">
 		<div class="col s10 offset-s1">
-      <div class="card white">
+     	<div class="card white">
       	<div class="card-content black-text">
-      	<a ng-href="/#/cart"><button class="red darken-3 btn waves-effect waves-light right" ng-click="toCartView()"> View Cart | {{noice.cart.length}}</button></a>
+      	<div class="row">
+
+		<div class="col s3">
+			<select class="left" ng-model="priceOrder" ng-init="price">
+				<option value="">---Sort by Price:---</option>
+				<option value="price">Low to High</option>
+				<option value="-price">High to Low</option>
+			</select>
+		</div>
+
+		<div class="col s3">
+			<select  style="display:block" ng-model="catFilter" ng-init="">
+					<option value="">--Filter by Category--</option>
+					<option ng-repeat="category in teaCategories" ng-value="{{category}}">{{category}}</option>
+				</select>
+		</div>
+							
+		<div class="col s3">
+			<input placeholder="Search by Name" type="text" name="query" ng-model="searchQuery">
+		</div>
+		
+		<div class="col s3">
+      		<a ng-href="/#/cart"><button class="red darken-3 btn waves-effect waves-light right" ng-click="toCartView()"> TOTAL: {{noice.total() | cents | currency:"$"}}</button></a>
+      	</div>
+
+      	</div>
 				<table class="bordered">
 					<thead>
 						<tr>
-							<td>Tea</td>
+							<td></td>
 							<td>
-								<span class="right">View by Price: <select class="left" ng-model="priceOrder" ng-init="price">
-							      		<option value="price">Low to High</option>
-							      		<option value="-price">High to Low</option>
-							      	</select>
-								</span>
+								
 							</td>
 						</tr>
 					</thead>
 					<tr ng-repeat="item in items | orderBy: priceOrder | filter : catFilter | filter: searchQuery">
 						<td> <img ng-src="{{item.imageUrl}}"></td>
 						<td> 
-							<h3>{{item.name}}</h3>
+							<h4>{{item.name}}</h3>
 							<p><b>Price: </b>{{item.price | cents | currency}}</p>
 							<p><b>Caffeine Scale: </b>{{item.caffeineScale}}</p>
 							<p><b>Ingredients: </b> {{item.ingredients}}</p>
 							<p><b>Rating: </b> {{item.rating}}</p>
 							<p><b>In Stock?: </b> {{item.inStock}}</p>
 							<p><b>Categories: </b> 
-								<ul>
-									<li ng-repeat="category in item.categories">{{category}}</li>
-								</ul></p>
-								<select style="display: block" ng-model="quant">
+					
+									<span ng-repeat="category in item.categories">{{category}} </span><br>
+								
+								<select ng-model="quant">
 									<option value="1">1</option>
 									<option value="2">2</option>
 									<option value="3">3</option>
 									<option value="4">4</option>
 									<option value="5">5</option>
 								</select>
-							<button class=" red darken-3 btn waves-effect waves-light" ng-model="item" ng-click="noice.addCart(item, quant)" >Add to cart</button>
-							<button class="red darken-3 btn waves-effect waves-light" ng-model="item" ng-click="deleteItem(item)">X</button>
+							<button class=" red darken-3 btn waves-effect waves-light right" ng-model="item" ng-click="noice.addCart(item, quant)" >Add to cart</button>
+							<!-- <button class="red darken-3 btn waves-effect waves-light" ng-model="item" ng-click="deleteItem(item)">X</button> -->
 						</td>
 					</tr>
 			</table>

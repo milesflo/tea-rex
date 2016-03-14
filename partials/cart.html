@@ -1,8 +1,8 @@
-
+<div class="container">
 <div class="row">
 		<div class="col s10 offset-s1">
       <div class="card white">
-      	<div class="card-content black-text">
+      <div class="card-content black-text">
 	<table>
 
 		<thead>
@@ -10,16 +10,13 @@
 				<td>Product</td>
 				<td>Quantity</td>
 				<td>Sub-Total</td>
-				<td> TOTAL: {{noice.total() | cents | currency:"USD$ "}}</td>
+				<td class="right green-text darken-3"> TOTAL: {{noice.total() | cents | currency:"USD$ "}}</td>
 			</tr>
 		</thead>
 		<tr ng-repeat="item in noice.cart">
 			<td>
-				<h1>{{item.name}}</h1>
-				<img ng-src="{{item.imageUrl}}">
-				<p><b>Caffeine Scale: </b> {{item.caffeineScale}} </p>
-				<p><b>Ingredients: </b> {{item.ingredients}} </p>
-				<p><b>Rating: </b> {{item.rating}}</p>
+				<h5>{{item.name}}</h5>
+				<img ng-src="{{item.imageUrl}}" height="150px;">
 			</td>
 			<td>
 				{{item.quantity}}
