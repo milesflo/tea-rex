@@ -3,7 +3,7 @@ app.controller("Catalogue", function($scope, $rootScope, $routeParams, $http, $l
 	$scope.teaCategories =[];
 	$scope.noice = noiceCart;
 
-	$http.get("./../teas.json").then(function(response) {
+	$http.get("../teas.json").then(function(response) {
 		$scope.items = response.data;
 		// $scope.orderBy = "price";
 
