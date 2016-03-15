@@ -1,3 +1,11 @@
+html {
+	min-width: 1100px;
+}
+
+.container {
+	width: 100%;
+}
+
 .left {
 	display: block;
 	float: left;
