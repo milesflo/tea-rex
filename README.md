@@ -8,8 +8,8 @@ teaRex uses Angular to create a single page shopping cart application which allo
 Materialize is used on the front end to beautifully tie it all together.
 The teaRex logo is custom and a copyright of Luis Rocha.
 
-Collaborators:
-Miles Florence
-Luis Rocha
-Eric Hodges
+Collaborators:<br>
+Miles Florence<br>
+Luis Rocha<br>
+Eric Hodges<br>
 
