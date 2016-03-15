@@ -15,13 +15,13 @@ app.controller("Catalogue", function($scope, $rootScope, $routeParams, $http, $l
 		    		$scope.teaCategories.push(arr[n]);
 		    		}
 		    	}
-		};
+		}
 
 
 		for (var i = 0; i < $scope.items.length; i++) {
 			categories($scope.items[i].categories);
 
-			if ($scope.items[i].inStock == true) {
+			if ($scope.items[i].inStock === true) {
 				$scope.items[i].inStock = "Yes";
 			} else {
 				$scope.items[i].inStock = "No";
