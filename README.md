@@ -2,6 +2,8 @@
 
 #### What is teaRex? 
 teaRex is a single page e-commerce platform where users can dynamically search, filter, and shop from our wide catalogue of items. 
+
+
 ![screenshot](http://i68.tinypic.com/2whnnfr.png)
 
 
@@ -37,7 +39,7 @@ For this application, our team used the SEAN stack (Sql, Express servers, Angula
 
 For the team, this was an introduction to some of Angular's more nuanced features. This included filters and services/factories/providers. 
 
-To give users the ability to quickly search by both query *and* by categories, we had to implement what are called _filters_. We used these filters to *only* display entries that met all of a user's search criteria at a given time. In order to have a functioning cart, we needed to be able to persist data from our two separate views. There are a couple of ways to do it, but we chose to use ```factories```. In short, a factory is an object with a number of properties that can be passed into a controller to be read or altered, as seen here:
+To give users the ability to quickly search by both query **and** by categories, we had to implement what are called _filters_. We used these filters to **only** display entries that met all of a user's search criteria at a given time. In order to have a functioning cart, we needed to be able to persist data from our two separate views. There are a couple of ways to do this, but we thought that a ```factory``` would be most appropriate. If you're not familiar with factories/services/providers and the differences between the three, you can read up on them (here)[http://tylermcginnis.com/angularjs-factory-vs-service-vs-provider/]. In short, **a factory is an object with a number of properties that can be passed into a controller to be read or altered**, as seen here:
 
 ```javascript
 // typical Angular controller
