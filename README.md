@@ -33,7 +33,7 @@ _Future_
 
 #### Technologies
 
-For this application, our team used the SEAN stack (Sql, Express servers, Angular, and Node.js). All of the information seen is derived from a .json file. We initially used pure CSS, but one of the more atristically inclined collaborators insisted that we try using Google's Materialize. Materialize is a wonderful styling sheet that can be described as "Movement with Purpose". The GUI is kept minimalistic and user interactions are animated in a sublte and intuitive fashion. The end result is a very clear and effortless frontend design.
+For this application, our team used the SEAN stack (Sql, Express servers, Angular, and Node.js). All of the information seen is derived from a .json file. We initially used pure CSS, but one of the more artistically inclined collaborators insisted that we try using Google's Materialize. Materialize is a wonderful styling sheet that can be described as "Movement with Purpose". The GUI is kept minimalistic and user interactions are animated in a sublte and intuitive fashion. The end result is a very clean and effortless frontend design.
 
 ##### Intermediate Angular
 
