@@ -1,20 +1,20 @@
 # teaRex
 
 What is teaRex? teaRex is a single page e-commerce platform where users can dynamically search, filter, and shop from our wide catalogue of items. 
-![screenshot](http://i.imgur.com/w0F44hP.png)
+![screenshot](http://i68.tinypic.com/2whnnfr.png)
 
 
 ### Contents
 
- * [Prompt](#prompt)
- * [Features](#features)
- * [Technologies](#technologies)
-..* [Intermediate Angular](#intermediate-angular)
- * [Contributors](#contributors)
+* [Prompt](#prompt)
+* [Features](#features)
+* [Technologies](#technologies)
+  * [Intermediate Angular](#intermediate-angular)
+* [Contributors](#contributors)
 
 #### Prompt
 
- > Prompt from Galvanize FSI-g16: "Given a .json file, create a single-page application that will render the entire Cataloge in one view, and a Cart in another view. The Catalogue page should support query search, filtering entries via dropdown menus, and the ability to add items to your cart. The Cart view should display items added to cart, quantity of each item, and the total cost of an order, and have the ability to remove items from the cart."
+ "Given a .json file, create a single-page application that will render the entire Cataloge in one view, and a Cart in another view. The Catalogue page should support query search, filtering entries via dropdown menus, and the ability to add items to your cart. The Cart view should display items added to cart, quantity of each item, and the total cost of an order, and have the ability to remove items from the cart."
 
 #### Features
 
