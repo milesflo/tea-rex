@@ -1,6 +1,6 @@
 # teaRex
 
-##### What is teaRex? 
+#### What is teaRex? 
 teaRex is a single page e-commerce platform where users can dynamically search, filter, and shop from our wide catalogue of items. 
 ![screenshot](http://i68.tinypic.com/2whnnfr.png)
 
