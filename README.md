@@ -6,11 +6,11 @@ What is teaRex? teaRex is a single page e-commerce platform where users can dyna
 
 ### Contents
 
- * Prompt
- * Features
- * Technologies
- * Intro to Angular Services
- * Contributors
+ * [Prompt](#prompt)
+ * [Features](#features)
+ * [Technologies](#technologies)
+..* [Intermediate Angular](#intermediate-angular)
+ * [Contributors](#contributors)
 
 #### Prompt
 
@@ -19,14 +19,14 @@ What is teaRex? teaRex is a single page e-commerce platform where users can dyna
 #### Features
 
 _Current_
-[x] Functioning Cart
-[x] Search for items with a text query
-[x] Sort items by Low to High and High to Low
-[x] Add and Remove items from cart
+ - [x] Functioning Cart
+ - [x] Search for items with a text query
+ - [x] Sort items by Low to High and High to Low
+ - [x] Add and Remove items from cart
 
 _Future_
-[ ] Replace .json file with server/database architecture
-[ ] Checkout page with oAuth to Paypal
+ - [ ] Replace .json file with server/database architecture
+ - [ ] Checkout page with oAuth to Paypal
 
 #### Technologies
 
